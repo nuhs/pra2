@@ -16,6 +16,7 @@ device.log(message='{OK!}', message_type='success')
 # Open the camera
 camera = cv2.VideoCapture(0)
 sleep(0.1)
+device.log(message='{OK!}', message_type='success')
 
 # Take a photo
 ret, image = camera.read()

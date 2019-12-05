@@ -1,6 +1,6 @@
 #!/usr/bin/env python
+'''MyOpen3d'''
 
-import cv2
 from farmware_tools import device, get_config_value, env
 import cv2
 

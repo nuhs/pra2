@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import cv2
-device.log(message='{}'.format(cv2), message_type='success')
+device.log(message='OK!', message_type='success')
 #import numpy as np
 #import open3d as o3d
 #import os

@@ -19,7 +19,8 @@ sleep(0.1)
 
 # Take a photo
 ret, image = camera.read()
-h, w, c = image.shape
+if ret:
+  h, w, c = image.shape
 
 # Close the camera
 camera.release()

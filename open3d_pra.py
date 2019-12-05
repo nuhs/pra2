@@ -17,11 +17,12 @@ device.log(message='{OK!}', message_type='success')
 p = os.getenv('camera', 'USB')
 camera = cv2.VideoCapture(p)
 sleep(0.1)
-device.log(message='{}'.format(p), message_type='success')
+#device.log(message='{}'.format(p), message_type='success')
 
 # Take a photo
 ret, image = camera.read()
 if ret:
+  cv.imshow('frame', image)
   h, w, c = image.shape
 
 # Close the camera

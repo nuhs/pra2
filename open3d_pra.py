@@ -12,6 +12,7 @@ import datetime
 #import open3d as o3d
 #import pykinect
 
+device.log(message='{OK!}', message_type='success')
 # Open the camera
 camera = cv2.VideoCapture(0)
 sleep(0.1)

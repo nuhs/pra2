@@ -13,12 +13,12 @@ from time import time, sleep
 #import open3d as o3d
 #import pykinect
 
-device.log(message='{OK!}', message_type='success')
+device.log(message='OK!', message_type='success')
 # Open the camera
-p = os.getenv('camera', 'USB')
+#p = os.getenv('camera', 'USB')
 camera = cv2.VideoCapture(0)
 sleep(0.1)
-#device.log(message='{}'.format(p), message_type='info')
+device.log(message='camera', message_type='info')
 
 epoch = int(time())
 filename = '{timestamp}.jpg'.format(timestamp=epoch)

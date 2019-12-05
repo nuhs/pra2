@@ -28,8 +28,9 @@ camera.release()
 # Output
 if ret:  # an image has been returned by the camera
     h, w, c = image.shape
-    device.log('Image Size{}:{}.'.format(h,w))
-    device.log('Image C{}.'.format(c))
+    device.log('Image Size {}:{}.'.format(h,w))
+    device.log('Image C {}.'.format(c))
+    device.log('Image Color {}.'.format(image[1,1]))
     
 else:  # no image has been returned by the camera
     device.log('Problem getting image from video{}.'.format(

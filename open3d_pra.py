@@ -7,11 +7,12 @@ import numpy as np
 import os
 import sys
 import datetime
-import pandas
+#import pandas
 #import matplotlib
 #import open3d as o3d
 #import pykinect
 
-device.log(message='OK! pandas', message_type='success')
+capture = cv.VideoCapture(0)
+device.log(message='{}'.format(capture), message_type='success')
 
 #config = o3d.io.AzureKinectSensorConfig()

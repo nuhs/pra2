@@ -22,9 +22,11 @@ for _ in range(discard_frames):
 
 # Take a photo
 ret, image = camera.read()
+h, w, c = image.shape
 
 # Close the camera
 camera.release()
-device.log(message='{}'.format(image), message_type='success')
+device.log(message='h={},w={}'.format(h,w), message_type='success')
+device.log(message='c={}'.format(c), message_type='success')
 
 #config = o3d.io.AzureKinectSensorConfig()

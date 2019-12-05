@@ -16,6 +16,6 @@ device.log(message='{OK!}', message_type='success')
 # Open the camera
 camera = cv2.VideoCapture(0)
 sleep(0.1)
-device.log(message='{}'.format(capture), message_type='success')
+device.log(message='{}'.format(str(capture)), message_type='success')
 
 #config = o3d.io.AzureKinectSensorConfig()

@@ -16,9 +16,6 @@ device.log(message='{OK!}', message_type='success')
 # Open the camera
 camera = cv2.VideoCapture(0)
 sleep(0.1)
-# Let camera adjust
-for _ in range(discard_frames):
-    camera.grab()
 
 # Take a photo
 ret, image = camera.read()

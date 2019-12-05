@@ -20,7 +20,8 @@ camera = cv2.VideoCapture(0)
 sleep(0.1)
 device.log('Camera {}.'.format(camera))
 # Take a photo
-ret, image = camera.read()
+#ret, image = camera.read()
+ret, image = camera.retrieve(cv2.CAP_OPENNI_DEPTH_MAP)
 device.log('image {}.'.format(image))
 
 # Close the camera

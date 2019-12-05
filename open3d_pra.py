@@ -15,7 +15,7 @@ import datetime
 device.log(message='{OK!}', message_type='success')
 # Open the camera
 p = os.getenv('camera', 'USB')
-camera = cv2.VideoCapture(p)
+camera = cv2.VideoCapture(0)
 sleep(0.1)
 #device.log(message='{}'.format(p), message_type='info')
 

@@ -7,6 +7,6 @@ from time import time, sleep
 import cv2
 from farmware_tools import device, get_config_value, env
 
-config = o3d.io.AzureKinectSensorConfig()
+#config = o3d.io.AzureKinectSensorConfig()
 device.log('Problem{}.'.format(
-            config), 'error', ['toast'])
+            cv2), 'error', ['toast'])

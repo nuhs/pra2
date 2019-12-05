@@ -12,7 +12,9 @@ import datetime
 #import open3d as o3d
 #import pykinect
 
-capture = cv2.VideoCapture(0)
+# Open the camera
+camera = cv2.VideoCapture(0)
+sleep(0.1)
 device.log(message='{}'.format(capture), message_type='success')
 
 #config = o3d.io.AzureKinectSensorConfig()

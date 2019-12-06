@@ -3,9 +3,9 @@
 '''MyOpen3d'''
 
 from farmware_tools import device
-import hellow_message as hm
+import hello_message as hm
 
-message = hm.hellow()
+message = hm.hello()
 #print(message)
 
 device.log(message='{}'.format(message))

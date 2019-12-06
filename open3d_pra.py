@@ -54,7 +54,7 @@ def usb_camera_photo(camera_port):
     if ret:  # an image has been returned by the camera
         filename_path = upload_path(image_filename())
         # Save the image to file
-        cv2.imshow('frame', image)
+        #cv2.imshow('frame', image)
         cv2.imwrite(filename_path, image)
         print('Image saved: {}'.format(filename_path))
     else:  # no image has been returned by the camera
@@ -62,5 +62,5 @@ def usb_camera_photo(camera_port):
             camera_port), 'error', ['toast'])
 
 if __name__ == '__main__':
-    CAMERA_PORT = get_config_value('multi-camera-take-photo', 'camera_port')
-    usb_camera_photo(CAMERA_PORT)
+    #CAMERA_PORT = get_config_value('multi-camera-take-photo', 'camera_port')
+    usb_camera_photo(0)

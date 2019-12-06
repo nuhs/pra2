@@ -6,6 +6,7 @@ from farmware_tools import device, get_config_value, env
 import hello_message as hm
 import os
 from time import time, sleep
+import cv2
 
 message = hm.hello()
 #print(message)

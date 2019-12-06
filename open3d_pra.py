@@ -22,7 +22,7 @@ def image_filename():
 
 def upload_path(filename):
     'Filename with path for uploading an image.'
-    images_dir = 'F:'
+    images_dir = 'D:'
     if not os.path.isdir(images_dir):
         device.log('{} directory does not exist.'.format(images_dir), 'error')
     path = images_dir + os.sep + filename

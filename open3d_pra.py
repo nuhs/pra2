@@ -2,8 +2,10 @@
 
 '''MyOpen3d'''
 
-from farmware_tools import device
+from farmware_tools import device, get_config_value, env
 import hello_message as hm
+import os
+from time import time, sleep
 
 message = hm.hello()
 #print(message)
@@ -14,6 +16,7 @@ def image_filename():
     'Prepare filename with timestamp.'
     epoch = int(time())
     filename = '{timestamp}.jpg'.format(timestamp=epoch)
+    device.log('{}'.format(filename))
     return filename
 
 def upload_path(filename):

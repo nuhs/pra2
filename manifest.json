@@ -1,5 +1,5 @@
 {
-  "package": "MyOpen3d",
+  "package": "TakePhotoRotate",
   "language": "python",
   "author": "me",
   "description": "A description of my Farmware",
@@ -10,5 +10,5 @@
   "url": "https://raw.github.com/nuhs/pra2/master/manifest.json",
   "zip": "https://github.com/nuhs/pra2/archive/master.zip",
   "executable": "python",
-  "args": "pra2-master/open3d_pra.py"
+  "args": "pra2-master/take_photo_rotate.py"
 }

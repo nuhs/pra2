@@ -52,7 +52,7 @@ def usb_camera_photo(camera_port):
     # Take a photo
     ret, image = camera.read()
     h, w = image.shape[:2]
-    angle = 90
+    angle = 270
     angle_rad = angle/180.0*np.pi
     w_rot = int(np.round(h*np.absolute(np.sin(angle_rad))+w*np.absolute(np.cos(angle_rad))))
     h_rot = int(np.round(h*np.absolute(np.cos(angle_rad))+w*np.absolute(np.sin(angle_rad))))

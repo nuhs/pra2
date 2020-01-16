@@ -56,6 +56,7 @@ def usb_camera_photo(camera_port):
     angle_rad = angle/180.0*np.pi
     w_rot = int(np.round(h*np.absolute(np.sin(angle_rad))+w*np.absolute(np.cos(angle_rad))))
     h_rot = int(np.round(h*np.absolute(np.cos(angle_rad))+w*np.absolute(np.sin(angle_rad))))
+    size_rot = (w_rot, h_rot)
     center = (w/2, h/2)
     scale = 1.0
     rotation_matrix = cv2.getRotationMatrix2D(center, angle, scale)

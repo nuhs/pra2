@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-'''MyOpen3d'''
+'''Take a Photo'''
 
 from farmware_tools import device, get_config_value, env
 import hello_message as hm
@@ -50,6 +50,19 @@ def usb_camera_photo(camera_port):
 
     # Take a photo
     ret, image = camera.read()
+    h, w = image.shape[:2]
+    angle = 90
+    angle_rad = angle/180.0*np.pi
+    w_rot = int(np.round(h*np.absolute(np.sin(angle_rad))+w*np.absolute(np.cos(angle_rad))))
+    h_rot = int(np.round(h*np.absolute(np.cos(angle_rad))+w*np.absolute(np.sin(angle_rad))))
+    center = (w/2, h/2)
+    scale = 1.0
+    rotation_matrix = cv2.getRotationMatrix2D(center, angle, scale)
+    affine_matrix = rotation_matrix.copy()
+    affine_matrix[0][2] = affine_matrix[0][2] -w/2 + w_rot/2
+    affine_matrix[1][2] = affine_matrix[1][2] -h/2 + h_rot/2
+
+    image = cv2.warpAffine(image, affine_matrix, size_rot, flags=cv2.INTER_CUBIC)
     
     # Close the camera
     camera.release()

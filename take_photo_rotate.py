@@ -7,6 +7,7 @@ import hello_message as hm
 import os
 from time import time, sleep
 import cv2
+import numpy as np
 
 message = hm.hello()
 #print(message)

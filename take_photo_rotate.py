@@ -65,6 +65,7 @@ def usb_camera_photo(camera_port):
     affine_matrix[1][2] = affine_matrix[1][2] -h/2 + h_rot/2
 
     image = cv2.warpAffine(image, affine_matrix, size_rot, flags=cv2.INTER_CUBIC)
+    image = cv2.flip(image, 0)
     
     # Close the camera
     camera.release()
